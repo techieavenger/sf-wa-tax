@@ -1,0 +1,33 @@
+<apex:page controller="WAStateDOR" >
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockSection >
+        <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Address"></apex:outputLabel>
+                 <apex:inputText value="{!address}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="City"></apex:outputLabel>
+                 <apex:inputText value="{!city}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Zip"></apex:outputLabel>
+                 <apex:inputText value="{!zip}"/>
+        </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+                 <apex:outputLabel value=""></apex:outputLabel>
+                 <apex:commandButton value="Get Rate" action="{!process}"/>
+             </apex:pageBlockSectionItem>  
+    <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Returned Rate"></apex:outputLabel>
+                 <apex:outputText value="{!taxi.rate}"></apex:outputText>
+        </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Returned Location Code"></apex:outputLabel>
+                 <apex:outputText value="{!taxi.location_code}"></apex:outputText>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
